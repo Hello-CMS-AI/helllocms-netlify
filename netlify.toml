@@ -7,4 +7,4 @@
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
-  NODE_VERSION = "16.13.0"     # Specify a precise, supported Node.js version
+  NODE_VERSION = "16.14.0"     # Specify a precise, supported Node.js version
