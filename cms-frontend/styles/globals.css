@@ -1,0 +1,119 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-input {
+  border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.common-input {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  text-align: left;
+  font-size: 1.2em; /* Set font size */
+  font-weight: 600; /* Make text bold */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Blinking animation for the draft dot */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Initially hide the row-actions container */
+.post-row .row-actions {
+  visibility: hidden;
+}
+
+/* When hovering over the entire row, show row-actions */
+.ant-table-tbody > tr:hover .row-actions {
+  visibility: visible;
+}
+
+/* Style the row-actions container */
+.row-actions {
+  display: inline-flex;
+  gap: 6px;
+}
+
+/* Example: make row height enough to display actions comfortably */
+.post-row td {
+  vertical-align: top;
+}
+
+/* Reduce scrollbar width */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Change the color of the scrollbar thumb */
+  border-radius: 10px; /* Optionally, give it rounded corners */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scrollbar track */
+  border-radius: 10px; /* Optionally, give it rounded corners */
+}

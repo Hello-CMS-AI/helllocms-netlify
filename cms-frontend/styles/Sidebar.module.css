@@ -1,0 +1,30 @@
+.ant-menu {
+    background-color: #20232a !important;
+  }
+  
+  .ant-menu-item-selected {
+    background-color: transparent !important; /* Remove the active background color */
+  }
+  
+  .ant-menu-item-active {
+    background-color: transparent !important; /* Ensure no background when hovered */
+  }
+  
+  .ant-menu-item-selected .anticon,
+  .ant-menu-item-selected span {
+    color: white !important; /* White color for active menu text and icon */
+  }
+  
+  .ant-menu-item:hover {
+    background-color: transparent !important; /* Remove hover background */
+    color: white !important;
+  }
+  
+  .ant-menu-submenu-title:hover {
+    color: white !important;
+  }
+  
+  .ant-menu-submenu-selected {
+    background-color: transparent !important;
+  }
+  
