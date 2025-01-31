@@ -1,0 +1,10 @@
+[build]
+  base    = "cms-frontend"     # Specifies the subdirectory containing your Next.js project
+  command = "npm run build"    # The build command to execute
+  publish = ".next"            # The directory to publish (relative to base)
+
+[build.environment]
+  NODE_VERSION = "16.x"       # (Optional) Specifies the Node.js version
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
