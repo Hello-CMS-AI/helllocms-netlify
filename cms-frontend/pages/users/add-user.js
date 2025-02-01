@@ -21,7 +21,7 @@ const AddUser = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await fetch('https://hellocms.dinasuvadu.com:5000/api/users/add-user', {
+      const response = await fetch('http://142.93.216.92:5000/api/users/add-user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance with default configuration
 const API = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://hellocms.dinasuvadu.com:5000/api', // Use environment variable for baseURL
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://142.93.216.92:5000/api', // Use environment variable for baseURL
 });
 
 // Add a request interceptor to include the token in headers

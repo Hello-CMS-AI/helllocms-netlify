@@ -30,7 +30,7 @@ const allowedMimeTypes = [
 ];
 
 // Fallback or default URL
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://hellocms.dinasuvadu.com:5000';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
 // Optional helper if you decode token for 'uploadedBy'
 const getUserInfoFromToken = () => {

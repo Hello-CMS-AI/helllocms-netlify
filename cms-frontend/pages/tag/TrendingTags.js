@@ -7,7 +7,7 @@ const TrendingTags = () => {
 
   const fetchTrendingTags = async () => {
     try {
-      const response = await fetch('https://hellocms.dinasuvadu.com:5000/api/tags/trending-tags');
+      const response = await fetch('http://142.93.216.92:5000/api/tags/trending-tags');
       if (response.ok) {
         const data = await response.json();
         setTrendingTags(data);

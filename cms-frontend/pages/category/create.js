@@ -11,7 +11,7 @@ const CreateCategory = () => {
   const [categories, setCategories] = useState([]);
   const router = useRouter();
 
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://hellocms.dinasuvadu.com:5000';
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://142.93.216.92:5000';
 
   // Build nested structure for hierarchical dropdown
   const buildNestedCategories = useCallback((categories, parentId = null) => {
