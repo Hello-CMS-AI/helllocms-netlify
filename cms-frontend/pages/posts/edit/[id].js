@@ -96,7 +96,7 @@ const EditPost = () => {
     const fetchTags = async () => {
       setLoadingTags(true);
       try {
-        const res = await fetch('http://142.93.216.92:5000/api/tags/list-tags');
+        const res = await fetch('http://localhost:5000/api/tags/list-tags');
         if (!res.ok) throw new Error('Failed to fetch tags');
         const data = await res.json();
         setAllTags(data);
@@ -117,7 +117,7 @@ const EditPost = () => {
     const fetchCategories = async () => {
       setLoadingCategories(true);
       try {
-        const res = await fetch('http://142.93.216.92:5000/api/categories/list-categories');
+        const res = await fetch('http://localhost:5000/api/categories/list-categories');
         if (!res.ok) throw new Error('Failed to fetch categories');
         const cats = await res.json();
         setAllCategories(cats);
@@ -172,7 +172,7 @@ const EditPost = () => {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://142.93.216.92:5000/api/posts/${id}`);
+        const res = await fetch(`http://localhost:5000/api/posts/${id}`);
         if (!res.ok) {
           message.error('Failed to load post data.');
           setLoading(false);
@@ -314,7 +314,7 @@ const EditPost = () => {
   const createNewTag = useCallback(
     async (name) => {
       try {
-        const res = await fetch('http://142.93.216.92:5000/api/tags/add-tag', {
+        const res = await fetch('http://localhost:5000/api/tags/add-tag', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name }),
@@ -385,7 +385,7 @@ const EditPost = () => {
           category: finalCategory,
         };
 
-        const res = await fetch(`http://142.93.216.92:5000/api/posts/${id}`, {
+        const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updatedData),
@@ -550,7 +550,7 @@ const EditPost = () => {
 
   const handleTrash = async ({ id }) => {
     try {
-      const response = await fetch(`http://142.93.216.92:5000/api/posts/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/posts/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'trash' }),
@@ -821,7 +821,7 @@ const EditPost = () => {
               onTrash={async ({ id }) => {
                 try {
                   const response = await fetch(
-                    `http://142.93.216.92:5000/api/posts/${id}`,
+                    `http://localhost:5000/api/posts/${id}`,
                     {
                       method: 'PUT',
                       headers: { 'Content-Type': 'application/json' },

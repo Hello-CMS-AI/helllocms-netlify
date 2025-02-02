@@ -29,7 +29,7 @@ const allowedMimeTypes = [
   'text/plain',
 ];
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://142.93.216.92:5000';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
 // Optional helper to decode the JWT token for 'uploadedBy'
 const getUserInfoFromToken = () => {

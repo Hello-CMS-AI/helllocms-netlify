@@ -6,7 +6,7 @@ import DashboardLayout from '../../../components/Layout';
 const { Content } = Layout;
 const { Option } = Select;
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://142.93.216.92:5000';
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
 
 const EditCategory = () => {
   const [form] = Form.useForm();
