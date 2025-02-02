@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance with default configuration
 const API = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://hellocms.netlify.app', // Use environment variable for baseURL
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.dinasuvadu.in/api', // Use environment variable for baseURL
 });
 
 // Add a request interceptor to include the token in headers
