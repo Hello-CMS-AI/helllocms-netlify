@@ -14,14 +14,14 @@ pnpm dev
 bun dev
 ```
 
-Open [https://hellocms.netlify.app/:3000
-](https://hellocms.netlify.app/:3000
+Open [https://hellocms.netlify.app/:
+](https://hellocms.netlify.app/:
 ) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [https://hellocms.netlify.app/:3000
-/api/hello](https://hellocms.netlify.app/:3000
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [https://hellocms.netlify.app/:
+/api/hello](https://hellocms.netlify.app/:
 /api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.

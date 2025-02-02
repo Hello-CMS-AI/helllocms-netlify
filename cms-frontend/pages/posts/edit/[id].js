@@ -117,7 +117,7 @@ const EditPost = () => {
     const fetchCategories = async () => {
       setLoadingCategories(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000/api/categories/list-categories');
+        const res = await fetch('https://api.dinasuvadu.in/api/categories/list-categories');
         if (!res.ok) throw new Error('Failed to fetch categories');
         const cats = await res.json();
         setAllCategories(cats);
@@ -172,7 +172,7 @@ const EditPost = () => {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`https://api.dinasuvadu.in:5000
+        const res = await fetch(`https://api.dinasuvadu.in
 /api/posts/${id}`);
         if (!res.ok) {
           message.error('Failed to load post data.');
@@ -315,7 +315,7 @@ const EditPost = () => {
   const createNewTag = useCallback(
     async (name) => {
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
+        const res = await fetch('https://api.dinasuvadu.in/api/tags/add-tag', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name }),
@@ -386,7 +386,7 @@ const EditPost = () => {
           category: finalCategory,
         };
 
-        const res = await fetch(`https://api.dinasuvadu.in:5000
+        const res = await fetch(`https://api.dinasuvadu.in
 /api/posts/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -552,7 +552,7 @@ const EditPost = () => {
 
   const handleTrash = async ({ id }) => {
     try {
-      const response = await fetch(`https://api.dinasuvadu.in:5000
+      const response = await fetch(`https://api.dinasuvadu.in
 /api/posts/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -824,7 +824,7 @@ const EditPost = () => {
               onTrash={async ({ id }) => {
                 try {
                   const response = await fetch(
-                    `https://api.dinasuvadu.in:5000
+                    `https://api.dinasuvadu.in
 /api/posts/${id}`,
                     {
                       method: 'PUT',

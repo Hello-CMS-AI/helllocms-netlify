@@ -55,7 +55,7 @@ const AllPosts = () => {
   // -------------------------------------
   useEffect(() => {
     // Distinct authors
-    fetch('https://api.dinasuvadu.in:5000/api/posts/distinct-authors')
+    fetch('https://api.dinasuvadu.in/api/posts/distinct-authors')
       .then((res) => res.json())
       .then((data) => {
         setAuthors(data.authors || []);
@@ -63,7 +63,7 @@ const AllPosts = () => {
       .catch(console.error);
 
     // Categories
-    fetch('https://api.dinasuvadu.in:5000/api/categories/list-categories')
+    fetch('https://api.dinasuvadu.in/api/categories/list-categories')
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -117,7 +117,7 @@ const AllPosts = () => {
         queryParams.set('categoryIn', allCatIds.join(','));
       }
 
-      const res = await fetch(`https://api.dinasuvadu.in:5000/api/posts?${queryParams.toString()}`);
+      const res = await fetch(`https://api.dinasuvadu.in/api/posts?${queryParams.toString()}`);
       if (!res.ok) throw new Error('Failed to fetch posts');
       const data = await res.json();
       setPosts(data);
@@ -145,7 +145,7 @@ const AllPosts = () => {
 
   const handleTrash = async (postId) => {
     try {
-      const res = await fetch(`https://api.dinasuvadu.in:5000
+      const res = await fetch(`https://api.dinasuvadu.in
 /api/posts/${postId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -162,7 +162,7 @@ const AllPosts = () => {
 
   const handleRestore = async (postId) => {
     try {
-      const res = await fetch(`https://api.dinasuvadu.in:5000
+      const res = await fetch(`https://api.dinasuvadu.in
 /api/posts/${postId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -179,7 +179,7 @@ const AllPosts = () => {
 
   const handleDeleteForever = async (postId) => {
     try {
-      const res = await fetch(`https://api.dinasuvadu.in:5000/api/posts/${postId}`, {
+      const res = await fetch(`https://api.dinasuvadu.in/api/posts/${postId}`, {
         method: 'DELETE',
       });
       if (!res.ok) throw new Error('Failed to permanently delete post');
@@ -198,7 +198,7 @@ const AllPosts = () => {
       return;
     }
 
-    let baseURL = 'https://hellocms.netlify.app/:3000'; 
+    let baseURL = 'https://hellocms.netlify.app/:'; 
     const cat = record.category; // e.g. cat.name, cat.parentCategory.name?
 
     if (cat?.parentCategory?.name) {
@@ -220,7 +220,7 @@ const AllPosts = () => {
 
   // If draft/scheduled => preview by _id
   const handlePreview = (postId) => {
-    window.open(`https://hellocms.netlify.app/:3000
+    window.open(`https://hellocms.netlify.app/:
 /preview/${postId}`, '_blank');
   };
 

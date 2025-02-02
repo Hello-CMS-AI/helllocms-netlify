@@ -7,7 +7,7 @@ const TrendingTags = () => {
 
   const fetchTrendingTags = async () => {
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000/api/tags/trending-tags');
+      const response = await fetch('https://api.dinasuvadu.in/api/tags/trending-tags');
       if (response.ok) {
         const data = await response.json();
         setTrendingTags(data);

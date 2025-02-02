@@ -17,7 +17,7 @@ const ListTags = () => {
 
   const fetchTags = async () => {
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000/api/tags/list-tags');
+      const response = await fetch('https://api.dinasuvadu.in/api/tags/list-tags');
       if (response.ok) {
         const data = await response.json();
         setTags(data);
@@ -45,7 +45,7 @@ const ListTags = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://api.dinasuvadu.in:5000
+      const response = await fetch(`https://api.dinasuvadu.in
 /api/tags/delete-tag/${id}`, {
         method: 'DELETE',
       });
@@ -75,7 +75,7 @@ const ListTags = () => {
     };
 
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
+      const response = await fetch('https://api.dinasuvadu.in/api/tags/add-tag', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -97,7 +97,7 @@ const ListTags = () => {
 
   const handleTrendingToggle = async (id) => {
     try {
-      const response = await fetch(`https://api.dinasuvadu.in:5000
+      const response = await fetch(`https://api.dinasuvadu.in
 /api/tags/mark-as-trending/${id}`, {
         method: 'PUT',
       });
