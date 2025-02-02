@@ -32,7 +32,7 @@ const AllUsers = () => {
 
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/users/all-users');
+        const response = await fetch('http://142.93.216.92:5000/api/users/all-users');
         if (!response.ok) throw new Error('Failed to fetch users');
         const data = await response.json();
         setUsers(data);
@@ -107,7 +107,7 @@ const AllUsers = () => {
       cancelText: 'No',
       onOk: async () => {
         try {
-          const response = await fetch(`http://localhost:5000/api/users/${record._id}`, { method: 'DELETE' });
+          const response = await fetch(`http://142.93.216.92:5000/api/users/${record._id}`, { method: 'DELETE' });
           if (!response.ok) throw new Error('Failed to delete user');
           
           // Update users and filteredUsers
