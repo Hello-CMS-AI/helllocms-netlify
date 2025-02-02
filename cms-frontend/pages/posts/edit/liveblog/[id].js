@@ -110,7 +110,8 @@ function LiveBlogEditor() {
     const fetchTags = async () => {
       setLoadingTags(true);
       try {
-        const res = await fetch('http://142.93.216.92:5000/api/tags/list-tags');
+        const res = await fetch('https://api.dinasuvadu.in:5000
+/api/tags/list-tags');
         if (!res.ok) throw new Error('Failed to fetch tags');
         const data = await res.json();
         setAllTags(data);
@@ -132,7 +133,8 @@ function LiveBlogEditor() {
       setLoadingCategories(true);
       try {
         const res = await fetch(
-          'http://142.93.216.92:5000/api/categories/list-categories'
+          'https://api.dinasuvadu.in:5000
+/api/categories/list-categories'
         );
         if (!res.ok) throw new Error('Failed to fetch categories');
         const cats = await res.json();
@@ -187,7 +189,8 @@ function LiveBlogEditor() {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://142.93.216.92:5000/api/posts/${id}`);
+        const res = await fetch(`https://api.dinasuvadu.in:5000
+/api/posts/${id}`);
         if (!res.ok) {
           message.error('Failed to load post data.');
           setLoading(false);
@@ -327,7 +330,8 @@ function LiveBlogEditor() {
   const createNewTag = useCallback(
     async (name) => {
       try {
-        const res = await fetch('http://142.93.216.92:5000/api/tags/add-tag', {
+        const res = await fetch('https://api.dinasuvadu.in:5000
+/api/tags/add-tag', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name }),
@@ -391,7 +395,8 @@ function LiveBlogEditor() {
           category: finalCategory,
         };
 
-        const res = await fetch(`http://142.93.216.92:5000/api/posts/${id}`, {
+        const res = await fetch(`https://api.dinasuvadu.in:5000
+/api/posts/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updatedData),
@@ -533,7 +538,8 @@ function LiveBlogEditor() {
     if (!id) return;
     const fetchLiveUpdates = async () => {
       try {
-        const res = await fetch(`http://142.93.216.92:5000/api/live-updates/${id}`);
+        const res = await fetch(`https://api.dinasuvadu.in:5000
+/api/live-updates/${id}`);
         if (!res.ok) {
           throw new Error('Failed to fetch live updates');
         }
@@ -563,7 +569,8 @@ function LiveBlogEditor() {
         createdBy: username,
       };
 
-      const res = await fetch(`http://142.93.216.92:5000/api/live-updates/${id}`, {
+      const res = await fetch(`https://api.dinasuvadu.in:5000
+/api/live-updates/${id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -604,7 +611,8 @@ function LiveBlogEditor() {
     if (!editUpdate?._id) return;
     try {
       const res = await fetch(
-        `http://142.93.216.92:5000/api/live-updates/${editUpdate._id}`,
+        `https://api.dinasuvadu.in:5000
+/api/live-updates/${editUpdate._id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -629,7 +637,8 @@ function LiveBlogEditor() {
   const handleDeleteUpdate = async (updateId) => {
     if (!updateId) return;
     try {
-      const res = await fetch(`http://142.93.216.92:5000/api/live-updates/${updateId}`, {
+      const res = await fetch(`https://api.dinasuvadu.in:5000
+/api/live-updates/${updateId}`, {
         method: 'DELETE',
       });
       if (!res.ok) {
@@ -648,7 +657,8 @@ function LiveBlogEditor() {
     try {
       const newPinned = !update.pinned;
       const res = await fetch(
-        `http://142.93.216.92:5000/api/live-updates/${update._id}`,
+        `https://api.dinasuvadu.in:5000
+/api/live-updates/${update._id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },

@@ -16,7 +16,8 @@ const EditTagPage = () => {
     if (!id) return;
     try {
       setLoading(true);
-      const response = await fetch(`http://142.93.216.92:5000/api/tags/${id}`);
+      const response = await fetch(`https://api.dinasuvadu.in:5000
+/api/tags/${id}`);
       if (response.ok) {
         const data = await response.json();
         form.setFieldsValue({
@@ -45,7 +46,8 @@ const EditTagPage = () => {
   const handleUpdateTag = async (values) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://142.93.216.92:5000/api/tags/update-tag/${id}`, {
+      const response = await fetch(`https://api.dinasuvadu.in:5000
+/api/tags/update-tag/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),

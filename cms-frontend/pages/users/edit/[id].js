@@ -16,7 +16,8 @@ const EditUser = () => {
     if (!id) return; // Return early if id is not available yet
     setLoading(true);
     try {
-      const response = await fetch(`http://142.93.216.92:5000/api/users/${id}`);
+      const response = await fetch(`https://api.dinasuvadu.in:5000
+/api/users/${id}`);
       if (response.ok) {
         const userData = await response.json();
         form.setFieldsValue({ ...userData, password: '' }); // Set password field to empty
@@ -41,7 +42,8 @@ const EditUser = () => {
       // Check if password is set
       const updateData = values.password ? values : { ...values, password: undefined };
   
-      const response = await fetch(`http://142.93.216.92:5000/api/users/edit/${id}`, {
+      const response = await fetch(`https://api.dinasuvadu.in:5000
+/api/users/edit/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData),
