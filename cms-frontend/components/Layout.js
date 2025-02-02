@@ -62,4 +62,4 @@ const DashboardLayout = ({ children }) => {
   );
 };
 
-export default ProtectedRoute(DashboardLayout);
+export default DashboardLayout;

@@ -30,7 +30,7 @@ const allowedMimeTypes = [
 ];
 
 // Fallback or default URL
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://localhost:5000';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://api.dinasuvadu.in';
 
 // Optional helper if you decode token for 'uploadedBy'
 const getUserInfoFromToken = () => {
