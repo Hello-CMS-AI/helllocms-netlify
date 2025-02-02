@@ -87,8 +87,8 @@ const Login = () => {
             <Input prefix={<UserOutlined />} placeholder="Username" />
           </Form.Item>
           <Form.Item name="password" rules={[{ required: true, message: 'Please enter your password' }]}>
-            <Input.Password prefix={<LockOutlined />} placeholder="Password" />
-          </Form.Item>
+  <Input.Password prefix={<LockOutlined />} placeholder="Password" autoComplete="current-password" />
+</Form.Item>
           <Form.Item>
             <Checkbox name="remember">Remember me</Checkbox>
             <a href="/forgot-password" style={{ float: 'right' }}>Forgot password?</a>
