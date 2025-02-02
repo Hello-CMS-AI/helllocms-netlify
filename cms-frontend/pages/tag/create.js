@@ -17,8 +17,7 @@ const CreateTagPage = () => {
   // Fetch all tags from the API
   const fetchTags = async () => {
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/list-tags');
+      const response = await fetch('https://api.dinasuvadu.in:5000/api/tags/list-tags');
       if (response.ok) {
         const data = await response.json();
         setTags(data);
@@ -48,8 +47,7 @@ const CreateTagPage = () => {
     };
 
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/add-tag', {
+      const response = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

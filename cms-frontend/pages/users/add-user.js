@@ -21,8 +21,7 @@ const AddUser = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await fetch('https://api.dinasuvadu.in:5000
-/api/users/add-user', {
+      const response = await fetch('https://api.dinasuvadu.in:5000/api/users/add-user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

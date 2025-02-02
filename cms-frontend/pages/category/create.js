@@ -11,8 +11,7 @@ const CreateCategory = () => {
   const [categories, setCategories] = useState([]);
   const router = useRouter();
 
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://api.dinasuvadu.in:5000
-';
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://api.dinasuvadu.in:5000';
 
   // Build nested structure for hierarchical dropdown
   const buildNestedCategories = useCallback((categories, parentId = null) => {

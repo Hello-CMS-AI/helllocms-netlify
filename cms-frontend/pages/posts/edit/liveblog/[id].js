@@ -110,8 +110,7 @@ function LiveBlogEditor() {
     const fetchTags = async () => {
       setLoadingTags(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/list-tags');
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/list-tags');
         if (!res.ok) throw new Error('Failed to fetch tags');
         const data = await res.json();
         setAllTags(data);
@@ -133,8 +132,7 @@ function LiveBlogEditor() {
       setLoadingCategories(true);
       try {
         const res = await fetch(
-          'https://api.dinasuvadu.in:5000
-/api/categories/list-categories'
+          'https://api.dinasuvadu.in:5000/api/categories/list-categories'
         );
         if (!res.ok) throw new Error('Failed to fetch categories');
         const cats = await res.json();
@@ -330,8 +328,7 @@ function LiveBlogEditor() {
   const createNewTag = useCallback(
     async (name) => {
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/add-tag', {
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name }),

@@ -67,8 +67,7 @@ const PostCreationPage = () => {
     const fetchCategories = async () => {
       setLoadingCategories(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/categories/list-categories');
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/categories/list-categories');
         if (!res.ok) throw new Error('Failed to fetch categories');
         const data = await res.json();
         setAllCategories(data);
@@ -106,8 +105,7 @@ const PostCreationPage = () => {
     const fetchTags = async () => {
       setLoadingTags(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/list-tags');
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/list-tags');
         if (!res.ok) throw new Error('Failed to fetch tags');
         const data = await res.json();
         setAllTags(data); // e.g. [ { _id, name }, ... ]
@@ -214,11 +212,9 @@ const PostCreationPage = () => {
       };
 
       // choose endpoint
-      let endpoint = 'https://api.dinasuvadu.in:5000
-/api/posts';
+      let endpoint = 'https://api.dinasuvadu.in:5000/api/posts';
       if (usePublishEndpoint) {
-        endpoint = 'https://api.dinasuvadu.in:5000
-/api/posts/publish';
+        endpoint = 'https://api.dinasuvadu.in:5000/api/posts/publish';
       }
 
       const res = await fetch(endpoint, {
@@ -258,8 +254,7 @@ const PostCreationPage = () => {
 
   const createNewTag = async (name) => {
     try {
-      const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/add-tag', {
+      const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),

@@ -96,8 +96,7 @@ const EditPost = () => {
     const fetchTags = async () => {
       setLoadingTags(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/list-tags');
+        const res = await fetch('https://api.dinasuvadu.in:500/api/tags/list-tags');
         if (!res.ok) throw new Error('Failed to fetch tags');
         const data = await res.json();
         setAllTags(data);
@@ -118,8 +117,7 @@ const EditPost = () => {
     const fetchCategories = async () => {
       setLoadingCategories(true);
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/categories/list-categories');
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/categories/list-categories');
         if (!res.ok) throw new Error('Failed to fetch categories');
         const cats = await res.json();
         setAllCategories(cats);
@@ -317,8 +315,7 @@ const EditPost = () => {
   const createNewTag = useCallback(
     async (name) => {
       try {
-        const res = await fetch('https://api.dinasuvadu.in:5000
-/api/tags/add-tag', {
+        const res = await fetch('https://api.dinasuvadu.in:5000/api/tags/add-tag', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name }),

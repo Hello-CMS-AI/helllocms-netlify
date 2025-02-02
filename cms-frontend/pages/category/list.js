@@ -6,8 +6,7 @@ import DashboardLayout from '../../components/Layout';
 
 const { Content } = Layout;
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://api.dinasuvadu.in:5000
-';
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://api.dinasuvadu.in:5000';
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
