@@ -28,7 +28,7 @@ const Dashboard = () => {
 
       // Use Ant Design's message.warning for logout notification
       message.warning('You have been logged out due to inactivity.');
-      
+      router.push('/login'); // Redirect to login page
     };
 
     // Validate token on component mount

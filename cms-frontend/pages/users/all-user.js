@@ -107,8 +107,7 @@ const AllUsers = () => {
       cancelText: 'No',
       onOk: async () => {
         try {
-          const response = await fetch(`https://api.dinasuvadu.in
-/api/users/${record._id}`, { method: 'DELETE' });
+          const response = await fetch(`https://api.dinasuvadu.in/api/users/${record._id}`, { method: 'DELETE' });
           if (!response.ok) throw new Error('Failed to delete user');
           
           // Update users and filteredUsers
