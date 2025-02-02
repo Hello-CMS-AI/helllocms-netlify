@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [currentView, setCurrentView] = useState('dashboard');
   const [username, setUsername] = useState(''); // State to store the username
   const router = useRouter();
-  
+  const INACTIVITY_LIMIT = 10 * 60 * 60 * 1000; // 10 hours for testing, adjust as needed
 
   // Toggle the sidebar
   const toggleSidebar = () => setCollapsed(!collapsed);
